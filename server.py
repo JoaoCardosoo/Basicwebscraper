@@ -7,12 +7,12 @@ import json
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/views")
 
-api = "291607784bdc4dfc97736f907a87eea8"
+api = "API:KEY"
 url = 'https://newsapi.org/v2/top-headlines?q=trump&apiKey=291607784bdc4dfc97736f907a87eea8'
 
 params = {
     'country': 'us',
-    'apiKey': '291607784bdc4dfc97736f907a87eea8',
+    'apiKey': 'API:KEY',
     'category': 'general'
 }
 
