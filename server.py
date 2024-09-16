@@ -7,12 +7,12 @@ import json
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/views")
 
-api = "API:KEY"
+api = "291607784bdc4dfc97736f907a87eea8"
 url = 'https://newsapi.org/v2/top-headlines?q=trump&apiKey=291607784bdc4dfc97736f907a87eea8'
 
 params = {
     'country': 'us',
-    'apiKey': 'API:KEY',
+    'apiKey': '291607784bdc4dfc97736f907a87eea8',
     'category': 'general'
 }
 
@@ -25,7 +25,6 @@ def search():
             response = requests.get(url, params=params)
             response_json = response.json()
             return render_template('index.html', results=response_json)
-        print ('Author:' + response_json['Author'])
     return render_template('index.html', articles=articles)         
 
 if __name__ == '__main__':
